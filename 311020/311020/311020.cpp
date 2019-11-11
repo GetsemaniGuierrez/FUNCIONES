@@ -1,27 +1,28 @@
 #include<iostream> 
 #include<string>
 using namespace std;
-int invertir(int num);
+void intercambio(int*, int*);
 
 int main()
 {
-	int num, resultado;
-	cout << "	Introduce un numero entero: ";
-	cin >> num;
-	resultado = invertir(num);
-	cout << "Numero original: " << num << endl;
-	cout << "Numero invertido: " << resultado << endl;
+	int a, b;
+	cout << "	Introduce el primer valor: ";
+	cin >> a;
+	cout << "	Introduce el segundo valor: ";
+	cin >> b;
+	cout << endl;
+	cout << "	Valor de a: " << a << endl <<
+			"	Valor de b: " << b << endl;
+	intercambio(&a, &b);
+	cout << endl << "	Despues del intercambio: " << endl << endl;
+	cout << "	Valor de la a: " << a << endl << "	Valor de la b: " << b << endl;
 	system("pause");
 	return 0;
 }
-int invertir(int num)
+void intercambio(int* x, int* y)
 {
-	int inverso = 0, cifra;
-	while (num != 0)
-	{
-		cifra = num % 10;
-		inverso = inverso * 10 + cifra;
-			num = num / 10;
-	}
-	return inverso;
+	int z;
+	z = *x;
+	* x = *y;
+	*y = z;
 }
