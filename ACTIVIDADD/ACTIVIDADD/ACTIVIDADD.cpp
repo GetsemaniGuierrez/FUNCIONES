@@ -4,29 +4,21 @@ using namespace std;
 
 int main()
 {
-	float vector1[3];
-	float vector2[3];
-	float vectorSuma[3];
-	int i;
-
-	for (i = 0; i < 3; i++)
+	int x, cont, z, i, tabla[100];
+	i = 0;
+	for (x = 1;x < 100;x++)
 	{
-		cout << "	Introduce el valor: " << i << "del primer vector";
-		cin >> vector1[i];
+		cont = 0;
+		if (x % 2 == 0)
+		{
+			tabla[i] = x;
+				i++;
+		}
 	}
-	for (i = 0; i < 3; i++)
+	for (x = 0; x < i; x++)
 	{
-		cout << "	Introduce el valor: " << i << "del segundo vector";
-		cin >> vector2[i];
+		cout << tabla[x] << endl;
 	}
-	for (i = 0; i < 3; i++)
-	{
-		vectorSuma[i] = vector1[i] + vector2[i];
-	}
-	cout << "	El vector suma es: ";
-	for (i = 0; i < 3; i++)
-	{
-		cout << vectorSuma[i] << " ";
-	}
+	system("pause");
+	return 0;
 }
-
